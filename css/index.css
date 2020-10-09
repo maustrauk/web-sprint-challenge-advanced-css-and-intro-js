@@ -139,11 +139,20 @@ button:hover{
     nav a {
         margin-right: 0.5rem;
         margin-left: 0.5rem;
+        font-size: 100%;
     }
     
+    .title-container {
+        margin-bottom: 2%;
+    }
+
     .title-container div {
         background-size: cover;
         height: 30rem;
+    }
+
+    .title-container hr {
+        margin-top: -2%;
     }
 
     h1 {
@@ -162,8 +171,13 @@ button:hover{
     }
 
     .artist {
-        border: 1px red solid;
         width: 50%;
+    }
+
+    .artist img {
+        display: block;
+        width: 90%;
+        height: 50%;
     }
 
     .artist a {
