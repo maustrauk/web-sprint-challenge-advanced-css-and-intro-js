@@ -231,6 +231,7 @@ function getArtistByIndex(userArray, userIndex) {
   return `the artist at index ${userIndex} is ${userArray[userIndex].name}`;
 }
 
+console.log(getArtistByIndex(artists, 0));
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -250,6 +251,7 @@ function get20s(userArray){
   return resultArray;
 }
 
+console.log(get20s(artists));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -267,6 +269,8 @@ function removeArtist(userArray,userIndex) {
   userArray.splice(userIndex,1);
   return userArray.length;
 }
+
+console.log(removeArtist(artists,3));
    
 
 /**
@@ -289,6 +293,12 @@ function addArtist(userObject){
   return resultArray[resultArray.length-1];
   }
 
+console.log(addArtist({id: 20,
+  name: 'Iaroslav Mokroguz', 
+  years: '1988 - 2020',
+  genre: 'Web Design', 
+  nationality: 'Ukrainian',
+  bio: 'lorem ipsum' }));
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -300,10 +310,17 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/){
-  /*Your Code Here*/
+function lotsOfArt(userArray){
+  const resultArray=[];
+  for (let i = 0; i < userArray.length; i++) {
+    if (userArray[i].paintings > 100) {
+      resultArray.push(userArray[i].name);
+    }
+  }
+  return resultArray;
 }
 
+console.log(lotsOfArt(artists));
 
 
 
