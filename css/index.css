@@ -156,14 +156,23 @@ button:hover{
 
     .artists-container {
         flex-direction: column;
+        flex-wrap: wrap;
         align-items: center;
         width:100%;
     }
 
-    .artist img {
-        display: block;
-        width: 125%;
-        height: 20rem;
+    .artist {
+        border: 1px red solid;
+        width: 50%;
+    }
+
+    .artist a {
+        font-size: 100%;
+        color: #626262;
+    }
+
+    .bio {
+        font-size: 50%;
     }
 
 }
