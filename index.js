@@ -228,7 +228,7 @@ Create a function called `getArtistByIndex` that takes two arguments:
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
 function getArtistByIndex(userArray, userIndex) {
-  return `The artist at index ${userIndex} is ${userArray[userIndex].name}.`
+  return `the artist at index ${userIndex} is ${userArray[userIndex].name}`;
 }
 
   
@@ -236,8 +236,18 @@ function getArtistByIndex(userArray, userIndex) {
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born in and died in 20th century (1900-2000) example born in 1901 and died in 1959 - included / born in 1889 and died in 1925 not included - should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(/*Your Code Here*/){
-  /*Your Code Here*/
+function get20s(userArray){
+  const resultArray=[];
+  let born, died, years;
+  for (let i = 0; i < userArray.length; i++) {
+    years = userArray[i].years.split("-");
+    born = parseInt(years[0]);
+    died = parseInt(years[1]);
+    if (born >= 1900 && died < 2000) {
+      resultArray.push(userArray[i].name);
+    }
+  }
+  return resultArray;
 }
 
 
