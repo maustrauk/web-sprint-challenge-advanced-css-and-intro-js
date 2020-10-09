@@ -135,3 +135,35 @@ button:hover{
     width:100%;
 }
 
+@media (max-width: 500px) {
+    nav a {
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
+    }
+    
+    .title-container div {
+        background-size: cover;
+        height: 30rem;
+    }
+
+    h1 {
+        font-size: 200%;
+    }
+
+    button {
+        font-size: 100%;
+    }
+
+    .artists-container {
+        flex-direction: column;
+        align-items: center;
+        width:100%;
+    }
+
+    .artist img {
+        display: block;
+        width: 125%;
+        height: 20rem;
+    }
+
+}
